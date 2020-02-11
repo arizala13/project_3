@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
                 Tab(icon: Icon(Icons.help_outline)),
               ],
             ),
-            title: Text('Cal? Me Maybe'),
+            title: Text('Call Me Maybe'),
           ),
           body: TabBarView(
             children: [
