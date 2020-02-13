@@ -28,14 +28,13 @@ class MyApp extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 4 /2,
                     child: Image.asset('assets/Andres-Arizala.jpg')),
-                  Row(
+                  Column(
                     children: <Widget>[
                       Center(child: Text('Andres Arizala \n', textAlign: TextAlign.center)),
                       Center(child: Text('832-215-9876 \n', textAlign: TextAlign.center)),
                       Center(child: Text('Andres Arizala \n', textAlign: TextAlign.center)),
-                      //Center(child: Text('arizala13@gmail \n', textAlign: TextAlign.center)),
-                      Center(child: GestureDetector(onTap: () => launch('arizala13@gmail.com')),
-                      )
+                      Center(child: Text('arizala13@gmail.com \n', textAlign: TextAlign.center)),
+                      //Center(child: GestureDetector(onTap: () => launch('arizala13@gmail.com'))),
                     ],
                   ),
                 ],
