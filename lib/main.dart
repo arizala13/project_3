@@ -4,11 +4,41 @@ import 'package:url_launcher/url_launcher.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(
+      debugShowCheckedModeBanner: false,
+      title: 'Project 3 - Call Me Maybe',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: MyHomePage(title: 'Call Me Maybe'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  void customLaunch(command) async {
+    if (await canLaunch(command)) {
+      await launch(command);
+    } else {
+      print(' could not launch $command');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
         length: 3,
         child: Scaffold(
           appBar: AppBar(
@@ -32,22 +62,22 @@ class MyApp extends StatelessWidget {
                     children: <Widget>[
                   Center(
                     child: Text('Andres Arizala \n', textAlign: TextAlign.center)
-                    ),
-                                      Center(
+                     ),
+                    Center(
                     child: Text('Software Engineer \n', textAlign: TextAlign.center)
-                    ),
-                                      Center(child: GestureDetector(
-                    onTap: () => launch('sms:8322159876'),
-                    child: Text('832-215-9876 \n', textAlign: TextAlign.center))
-                    ),
-                                      Center(child: GestureDetector(
-                    onTap: () => launch('https:github.com/arizala13'),
-                    child: Text('github.com/arizala13 \n', textAlign: TextAlign.center))
-                    ),
-                                                          Center(child: GestureDetector(
-                    onTap: () => launch('mailto:arizala13@gmail.com?subject=News&body=New%20plugin'),
-                    child: Text('arizala13@gmail.com \n', textAlign: TextAlign.center))
-                    ),
+                     ),
+                    Center(child: GestureDetector(
+                      onTap: () => launch('sms:8322159876'),
+                     child: Text('832-215-9876 \n', textAlign: TextAlign.center))
+                     ),
+                    Center(child: GestureDetector(
+                     onTap: () => launch('https:github.com/arizala13'),
+                     child: Text('github.com/arizala13 \n', textAlign: TextAlign.center))
+                     ),
+                    Center(child: GestureDetector(
+                      onTap: () => launch('mailto:arizala13@gmail.com?subject=<subject>&body=<body>'),
+                      child: Text('arizala13@gmail.com \n', textAlign: TextAlign.center))
+                      ),
                     ], 
                   ),
                 ],
@@ -62,9 +92,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-        ),
       ),
     );
   }
 }
-
