@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,11 +28,26 @@ class MyApp extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 4 /2,
                     child: Image.asset('assets/Andres-Arizala.jpg', width: 100, height: 100)),
-                  Center(child: Text('Andres Arizala \n Software Engineer \n 832-215-9876 \n github.com/arizala13        arizala13@gmail.com', textAlign: TextAlign.center,)),
+                  Center(
+                    children: <Widget>[
+                      Center(child: Text('Andres Arizala \n', textAlign: TextAlign.center)),
+                      Center(child: Text('832-215-9876 \n', textAlign: TextAlign.center)),
+                      Center(child: Text('Andres Arizala \n', textAlign: TextAlign.center)),
+                      Center(child: Text('arizala13@gmail \n', textAlign: TextAlign.center)),
+                      Center(child: GestureDetector(onTap: () => launch('arizala13@gmail.com')),
+                      )
+                    ],
+                  ),
                 ],
               ),
               Text('Resume', textAlign: TextAlign.center,),
-              Center(child: Text('Predictor', textAlign: TextAlign.center,)),
+             Column(
+                children: <Widget>[
+                  Center(child: Text('Call Me... Maybe?', textAlign: TextAlign.center,)),
+                  Center(child: Text('Ask a question...tap for the answer.', textAlign: TextAlign.center,)),
+                  Center(child: Text('HERE GOES THE RANDOM THINGS', textAlign: TextAlign.center,)),
+                ],
+              ),
             ],
           ),
         ),
