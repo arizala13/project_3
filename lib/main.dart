@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Call Me Maybe'),
+      home: MyHomePage(title: 'Call Me Maybe',),
     );
   }
 }
@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            centerTitle: true, 
             bottom: TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.face)),
