@@ -28,15 +28,18 @@ class MyApp extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 4 /2,
                     child: Image.asset('assets/Andres-Arizala.jpg')),
-                  Column(
+                  /* Column(
                     children: <Widget>[
                       Center(child: Text('Andres Arizala \n', textAlign: TextAlign.center)),
                       Center(child: Text('832-215-9876 \n', textAlign: TextAlign.center)),
                       Center(child: Text('Andres Arizala \n', textAlign: TextAlign.center)),
-                      Center(child: Text('arizala13@gmail.com \n', textAlign: TextAlign.center)),
-                      //Center(child: GestureDetector(onTap: () => launch('arizala13@gmail.com'))),
-                    ],
-                  ),
+                      Center(child: GestureDetector(onTap: () => launch('sms:5550101234'))),
+                    ], 
+                  ), */ 
+                  Center(child: GestureDetector(
+                    onTap: () => launch('sms:5550101234'),
+                    child: Text('Andres Arizala \n', textAlign: TextAlign.center))
+                    ),
                 ],
               ),
               Text('Resume', textAlign: TextAlign.center,),
@@ -54,3 +57,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
