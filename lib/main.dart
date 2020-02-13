@@ -22,7 +22,14 @@ class MyApp extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Center(child: Text('Andres Arizala \n Software Engineer \n 832-215-9876 \n github.com/arizala13        arizala13@gmail.com', textAlign: TextAlign.center,)),
+              Column(
+                children: <Widget>[
+                  AspectRatio(
+                    aspectRatio: 4 /2,
+                    child: Image.asset('assets/Andres-Arizala.jpg', width: 100, height: 100)),
+                  Center(child: Text('Andres Arizala \n Software Engineer \n 832-215-9876 \n github.com/arizala13        arizala13@gmail.com', textAlign: TextAlign.center,)),
+                ],
+              ),
               Text('Resume', textAlign: TextAlign.center,),
               Center(child: Text('Predictor', textAlign: TextAlign.center,)),
             ],
