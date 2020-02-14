@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-          body1: TextStyle(fontSize: 20.0, fontFamily: 'Hind', fontWeight: FontWeight.bold),
+          body1: TextStyle(fontSize: 16.0, fontFamily: 'Hind', fontWeight: FontWeight.bold),
     ),
       ),
       home: MyHomePage(title: 'Call Me Maybe',),
