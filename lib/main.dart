@@ -73,9 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Column(
                 children: <Widget>[
-                  AspectRatio(
-                    aspectRatio: 4 /2,
-                    child: Image.asset('assets/Andres-Arizala.jpg')),
+                  Flexible(
+                    child: FittedBox(
+                      child: Image.asset('assets/Andres-Arizala.jpg')),
+                  ),
                    Column(
                     children: <Widget>[
                   Center(
