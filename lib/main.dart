@@ -53,6 +53,14 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  int dataToChange = 0;
+
+  void changeData(){
+    setState(() {
+      dataToChange += 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -103,10 +111,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Text('Resume', textAlign: TextAlign.center,),
              Column(
+               mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Center(child: Text('Call Me... Maybe?', textAlign: TextAlign.center,)),
-                  Center(child: Text('Ask a question...tap for the answer.', textAlign: TextAlign.center,)),
-                  Center(child: Text('HERE GOES THE RANDOM THINGS', textAlign: TextAlign.center,)),
+                  Center(child: Text('Call Me... Maybe? \n',)),
+                  Center(child: GestureDetector(
+                    onTap: changeData,
+                      child: Text("Ask a question...tap for the answer. \n"),
+                      ),),
+                  Center(child: Text("$dataToChange",)),
                 ],
               ),
             ],
