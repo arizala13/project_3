@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
+import "dart:math";
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,11 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  int dataToChange = 0;
+
+  var element = ' ';
+  var list = ['Yes you will!','Probably not.. :(','What do you think?','hmmm maybe?!','Of course!'];
+
+  final _random = new Random();
 
   void changeData(){
     setState(() {
-      dataToChange += 1;
+      element = list[_random.nextInt(list.length)];
     });
   }
 
@@ -113,12 +118,12 @@ class _MyHomePageState extends State<MyHomePage> {
              Column(
                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Center(child: Text('Call Me... Maybe? \n',)),
+                  Center(child: Text('Will you get your dream job? \n',)),
                   Center(child: GestureDetector(
                     onTap: changeData,
-                      child: Text("Ask a question...tap for the answer. \n"),
+                      child: Text("TAP HERE! We will show your future below... \n"),
                       ),),
-                  Center(child: Text("$dataToChange",)),
+                  Center(child: Text("$element",)),
                 ],
               ),
             ],
