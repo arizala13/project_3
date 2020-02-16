@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-          body1: TextStyle(fontSize: 16.0, fontFamily: 'Hind', fontWeight: FontWeight.bold),
+          body1: TextStyle(fontSize: 16.0, fontFamily: 'Hindi', fontWeight: FontWeight.bold),
     ),
       ),
-      home: MyHomePage(title: 'Call Me Maybe',),
+      home: MyHomePage(title: 'Andres Arizala - Flutter',),
     );
   }
 }
@@ -53,6 +53,52 @@ class _MyHomePageState extends State<MyHomePage> {
       print(' could not launch $command');
     }
   }
+
+      Widget candidateInfo() {
+      return Row(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+                        Text('Andres Arizala', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26.0)),
+                        Text('arizala13@gmail.com',), 
+                        Text('https://github.com/arizala13')
+                      ],
+                    )
+        ],
+      );
+    }
+
+    Widget candidateJobInfo() {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Wrap(
+              spacing: 60, 
+            children: <Widget>[
+                        Text('Verizon',),
+                        Text('2013-Present'), 
+                        Text('Houston, Texas')
+                      ],
+                    )
+        ],
+      );
+    }
+
+        Widget candidateJobDescription() {
+      return Row(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+                        Text('This is job description stuff'),
+                      ],
+                    )
+        ],
+      );
+    }
 
 
   var element = ' ';
@@ -80,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Tab(icon: Icon(Icons.help_outline)),
               ],
             ),
-            title: Text('Call Me Maybe'),
+            title: Text('Andres Arizala - Flutter'),
           ),
           body: TabBarView(
             children: [
@@ -115,15 +161,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Column(
                   children: <Widget>[
                    Column(
-                    children: <Widget>[
-                    Text('Andres Arizala'),
-                    Text('Arizala13@gmail.com'),
-                    Text('github.com/arizala13 \n'),
+                    children: <Widget>[candidateInfo(), Text(''),
                     ], 
                   ),
                   ]
@@ -131,10 +173,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 Column(
                   children: <Widget>[
                    Row(
-                    children: <Widget>[
-                    Text('Company    '),
-                    Text('Dates   '),
-                    Text('Location   '),
+                    children: <Widget>[ candidateJobInfo(),
+                     Text(''),
                     ], 
                   ),
                   ]
@@ -142,8 +182,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Column(
                   children: <Widget>[
                    Column(
-                    children: <Widget>[
-                    Text('This is a description of the position and what happened here'),
+                    children: <Widget>[ candidateJobDescription(),
                     ], 
                   ),
                   ]
