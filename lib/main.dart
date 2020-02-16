@@ -123,7 +123,27 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                     Text('Andres Arizala'),
                     Text('Arizala13@gmail.com'),
-                    Text('github.com/arizala13'),
+                    Text('github.com/arizala13 \n'),
+                    ], 
+                  ),
+                  ]
+                ),
+                Column(
+                  children: <Widget>[
+                   Row(
+                    children: <Widget>[
+                    Text('Company    '),
+                    Text('Dates   '),
+                    Text('Location   '),
+                    ], 
+                  ),
+                  ]
+                ),
+                                Column(
+                  children: <Widget>[
+                   Column(
+                    children: <Widget>[
+                    Text('This is a description of the position and what happened here'),
                     ], 
                   ),
                   ]
