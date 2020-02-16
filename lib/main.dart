@@ -114,7 +114,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-              Text('Resume', textAlign: TextAlign.center,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                   Column(
+                    children: <Widget>[
+                    Text('Andres Arizala'),
+                    Text('Arizala13@gmail.com'),
+                    Text('github.com/arizala13'),
+                    ], 
+                  ),
+                  ]
+                ),
+              ],
+            ),
              Column(
                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
