@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Column(
                 children: <Widget>[
                   Flexible(
-                    child: FittedBox(
+                    child: SizedBox(
                       child: Image.asset('assets/Andres-Arizala.jpg')),
                   ),
                    Column(
