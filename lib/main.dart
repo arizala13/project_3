@@ -89,13 +89,15 @@ class _MyHomePageState extends State<MyHomePage> {
         Widget candidateJobDescription() {
       return Row(
         children: <Widget>[
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-                        Text('This is job description stuff'),
-                      ],
-                    )
+          Expanded(
+                      child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                          Text('Exceed in all key metrics by engaging with customers and selling solutions that create the best customer experience possible in doing so ranked in the top 20% of all Solutions Specialists in the South Central Market for 2014, 2015, 2016 and 2017. For 2018 I ranked in the TOP 10%.'),
+                        ],
+                      ),
+          )
         ],
       );
     }
@@ -160,34 +162,104 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-            Column(
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                   Column(
-                    children: <Widget>[candidateInfo(), Text(''),
-                    ], 
+            SingleChildScrollView(
+                          child: Column(
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                     Column(
+                      children: <Widget>[candidateInfo(), Text(''),
+                      ], 
+                    ),
+                    ]
                   ),
-                  ]
-                ),
-                Column(
-                  children: <Widget>[
-                   Row(
-                    children: <Widget>[ candidateJobInfo(),
-                     Text(''),
-                    ], 
+                  Column(
+                    children: <Widget>[
+                     Row(
+                      children: <Widget>[ candidateJobInfo(),
+                       Text(''),
+                      ], 
+                    ),
+                    ]
                   ),
-                  ]
-                ),
-                                Column(
-                  children: <Widget>[
-                   Column(
-                    children: <Widget>[ candidateJobDescription(),
-                    ], 
+                                  Column(
+                    children: <Widget>[
+                     Column(
+                      children: <Widget>[ candidateJobDescription(),
+                      ], 
+                    ),
+                    ]
                   ),
-                  ]
-                ),
-              ],
+                                  Column(
+                    children: <Widget>[
+                     Row(
+                      children: <Widget>[ candidateJobInfo(),
+                       Text(''),
+                      ], 
+                    ),
+                    ]
+                  ),
+                                  Column(
+                    children: <Widget>[
+                     Column(
+                      children: <Widget>[ candidateJobDescription(),
+                      ], 
+                    ),
+                    ]
+                  ),
+                                  Column(
+                    children: <Widget>[
+                     Row(
+                      children: <Widget>[ candidateJobInfo(),
+                       Text(''),
+                      ], 
+                    ),
+                    ]
+                  ),
+                                  Column(
+                    children: <Widget>[
+                     Column(
+                      children: <Widget>[ candidateJobDescription(),
+                      ], 
+                    ),
+                    ]
+                  ),
+                                  Column(
+                    children: <Widget>[
+                     Row(
+                      children: <Widget>[ candidateJobInfo(),
+                       Text(''),
+                      ], 
+                    ),
+                    ]
+                  ),
+                                  Column(
+                    children: <Widget>[
+                     Column(
+                      children: <Widget>[ candidateJobDescription(),
+                      ], 
+                    ),
+                    ]
+                  ),
+                                                    Column(
+                    children: <Widget>[
+                     Row(
+                      children: <Widget>[ candidateJobInfo(),
+                       Text(''),
+                      ], 
+                    ),
+                    ]
+                  ),
+                                  Column(
+                    children: <Widget>[
+                     Column(
+                      children: <Widget>[ candidateJobDescription(),
+                      ], 
+                    ),
+                    ]
+                  ),
+                ],
+              ),
             ),
              Column(
                mainAxisAlignment: MainAxisAlignment.center,
