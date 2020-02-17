@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           title: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold),
-          body1: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.pink[50]),
+          body1: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold, color: Colors.pink[50]),
     ),
       ),
       home: MyHomePage(title: 'Andres Arizala - Flutter',),
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
   var element = ' ';
-  var list = ['Yes you will!','Probably not.. :(','What do you think?','hmmm maybe?!','Of course!'];
+  var list = ['No!', 'Yes!', 'I am unsure', 'Yes you will!','Probably not.. :(','What do you think?','hmmm maybe?!','Of course!'];
 
   final _random = new Random();
 
