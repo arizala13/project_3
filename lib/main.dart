@@ -167,14 +167,20 @@ class _MyHomePageState extends State<MyHomePage> {
             SingleChildScrollView(
               child: Column(
                 children: <Widget>[ candidateInfo(), 
-                  Column(
-                    children: <Widget>[candidateJobInfo(),
-                    ]
-                  ),
-                  Column(
-                      children: <Widget>[ candidateJobDescription(),
-                      ], 
-                  ),
+                candidateJobInfo(),
+                candidateJobDescription(),
+                candidateJobInfo(),
+                candidateJobDescription(),
+                candidateJobInfo(),
+                candidateJobDescription(),
+                candidateJobInfo(),
+                candidateJobDescription(),
+                candidateJobInfo(),
+                candidateJobDescription(),
+                candidateJobInfo(),
+                candidateJobDescription(),
+                candidateJobInfo(),
+                candidateJobDescription(),
                 ],
               ),
             ),
