@@ -24,11 +24,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Project 3 - Call Me Maybe',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primaryColor: Colors.red[400],
+        accentColor: Colors.orange[50],
+        brightness: Brightness.dark,
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-          body1: TextStyle(fontSize: 16.0, fontFamily: 'Hindi', fontWeight: FontWeight.bold),
+          body1: TextStyle(fontSize: 16.0, fontFamily: 'Hindi', fontWeight: FontWeight.bold, color: Colors.pink[50]),
     ),
       ),
       home: MyHomePage(title: 'Andres Arizala - Flutter',),
@@ -76,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Wrap(
-              spacing: 60, 
+            spacing: 60, 
             children: <Widget>[
                         Text('Verizon',),
                         Text('2013-Present'), 
@@ -167,6 +169,8 @@ class _MyHomePageState extends State<MyHomePage> {
             SingleChildScrollView(
               child: Column(
                 children: <Widget>[ candidateInfo(), 
+                candidateJobInfo(),
+                candidateJobDescription(),
                 candidateJobInfo(),
                 candidateJobDescription(),
                 candidateJobInfo(),
