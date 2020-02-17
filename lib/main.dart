@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import "dart:math";
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,8 +30,8 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),
-          body1: TextStyle(fontSize: 16.0, fontFamily: 'Hindi', fontWeight: FontWeight.bold, color: Colors.pink[50]),
+          title: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold),
+          body1: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.pink[50]),
     ),
       ),
       home: MyHomePage(title: 'Andres Arizala - Flutter',),
@@ -63,9 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-                        Text('Andres Arizala', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26.0)),
-                        Text('arizala13@gmail.com',), 
-                        Text('https://github.com/arizala13'),
+                        Text('Andres Arizala', style: GoogleFonts.sriracha(fontWeight: FontWeight.bold, fontSize: 26.0,)),
+                        Text('arizala13@gmail.com',style: GoogleFonts.sriracha(),), 
+                        Text('https://github.com/arizala13', style: GoogleFonts.sriracha(),),
                         Text(''),
                       ],
                     )
@@ -80,9 +81,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Wrap(
             spacing: 60, 
             children: <Widget>[
-                        Text('Verizon',),
-                        Text('2013-Present'), 
-                        Text('Houston, Texas')
+                        Text('Verizon',style: GoogleFonts.sriracha()),
+                        Text('2013-Present',style: GoogleFonts.sriracha()), 
+                        Text('Houston, Texas',style: GoogleFonts.sriracha())
                       ],
                     )
         ],
@@ -97,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                          Text('Exceed in all key metrics by engaging with customers and selling solutions that create the best customer experience possible in doing so ranked in the top 20% of all Solutions Specialists in the South Central Market for 2014, 2015, 2016 and 2017. For 2018 I ranked in the TOP 10%.', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0)),
+                          Text('Exceed in all key metrics by engaging with customers and selling solutions that create the best customer experience possible in doing so ranked in the top 20% of all Solutions Specialists in the South Central Market for 2014, 2015, 2016 and 2017. For 2018 I ranked in the TOP 10%.', style: GoogleFonts.sriracha(fontWeight: FontWeight.bold, fontSize: 12.0)),
                           Text(''),
                         ],
                       ),
@@ -145,22 +146,22 @@ class _MyHomePageState extends State<MyHomePage> {
                    Column(
                     children: <Widget>[
                   Center(
-                    child: Text('Andres Arizala \n', textAlign: TextAlign.center)
+                    child: Text('Andres Arizala \n', textAlign: TextAlign.center, style: GoogleFonts.sriracha())
                      ),
                     Center(
-                    child: Text('Software Engineer \n', textAlign: TextAlign.center)
+                    child: Text('Software Engineer \n', textAlign: TextAlign.center, style: GoogleFonts.sriracha())
                      ),
                     Center(child: GestureDetector(
                       onTap: () => launch('sms:8322159876'),
-                     child: Text('832-215-9876 \n', textAlign: TextAlign.center))
+                     child: Text('832-215-9876 \n', textAlign: TextAlign.center, style: GoogleFonts.sriracha()))
                      ),
                     Center(child: GestureDetector(
                      onTap: () => launch('https:github.com/arizala13'),
-                     child: Text('github.com/arizala13 \n', textAlign: TextAlign.center))
+                     child: Text('github.com/arizala13 \n', textAlign: TextAlign.center, style: GoogleFonts.sriracha()))
                      ),
                     Center(child: GestureDetector(
                       onTap: () => launch('mailto:arizala13@gmail.com?subject=<subject>&body=<body>'),
-                      child: Text('arizala13@gmail.com \n', textAlign: TextAlign.center))
+                      child: Text('arizala13@gmail.com \n', textAlign: TextAlign.center, style: GoogleFonts.sriracha()))
                       ),
                     ], 
                   ),
@@ -191,12 +192,12 @@ class _MyHomePageState extends State<MyHomePage> {
              Column(
                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Center(child: Text('Will you get your dream job? \n',)),
+                  Center(child: Text('Will you get your dream job? \n', style: GoogleFonts.sriracha())),
                   Center(child: GestureDetector(
                     onTap: changeData,
-                      child: Text("TAP HERE! We will show your future below... \n"),
+                      child: Text("TAP HERE! We will show your future below... \n", style: GoogleFonts.sriracha()),
                       ),),
-                  Center(child: Text("$element",)),
+                  Center(child: Text("$element", style: GoogleFonts.sriracha())),
                 ],
               ),
             ],
